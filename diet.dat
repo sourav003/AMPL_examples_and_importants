@@ -1,0 +1,34 @@
+# Data for the diet problem
+
+set FOOD := Beef Chicken Fish;
+set NUTR := Protein Fat Carbs;
+
+param cost :=
+   Beef    3.00
+   Chicken 2.50
+   Fish    4.00;
+
+param f_min :=
+   Beef    0
+   Chicken 0
+   Fish    0;
+
+param f_max :=
+   Beef    10
+   Chicken 15
+   Fish    8;
+
+param amt: Protein Fat Carbs :=
+   Beef    20    10    5
+   Chicken 25    5     10
+   Fish    18    8     7;
+
+param n_min :=
+   Protein 100
+   Fat     30
+   Carbs   50;
+
+param n_max :=
+   Protein 200
+   Fat     70
+   Carbs   120;

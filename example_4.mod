@@ -1,0 +1,22 @@
+# AMPL tutorial example 4 
+# run command: model fileName.mod; e.g. model example_4.mod;
+
+# Use reset to clear memory for AMPL
+reset;
+
+# Declare Variable 
+var x binary;
+
+# Define objective function
+minimize obj: x;
+
+# Define constraints
+subject to constName: -1.5 <= x <= 3;
+
+# Solver setting
+option solver gurobi; # MINOS, cplex
+option gurobi_options('mipgap=0.0 timelim=90');
+solve; 
+
+# Show the results
+display x;
